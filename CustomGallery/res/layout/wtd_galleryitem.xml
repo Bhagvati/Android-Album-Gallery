@@ -1,0 +1,33 @@
+<com.wtd.customgallery.customview.SquareFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center" >
+
+    <com.wtd.customgallery.customview.SquareImageView
+        android:id="@+id/thumbImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/imagethumb" />
+
+   
+
+    <ImageView
+        android:id="@+id/gcImageViewTick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/tick_icon"
+        android:visibility="gone" >
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/gcImageViewVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|right"
+        android:background="@drawable/play_video"
+        android:visibility="gone" >
+    </ImageView>
+
+</com.wtd.customgallery.customview.SquareFrameLayout>

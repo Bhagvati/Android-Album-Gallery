@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wtd.customgallery"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:maxSdkVersion="19"
+        android:minSdkVersion="14" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+          >
+        <activity
+            android:name="com.wtd.customgallery.ChooseFileActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        
+        <activity
+            android:name="com.wtd.customgallery.MainActivity"
+            android:configChanges="orientation|screenSize" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.wtd.customgallery.CustomGalleryActivity"
+            android:configChanges="orientation|screenSize" 
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" 
+           />
+        <activity
+            android:name="com.wtd.customgallery.VideoAlbumListActivity"
+            android:configChanges="orientation|screenSize" >
+        </activity>
+         <activity
+            android:name="com.wtd.customgallery.AllMediaActivity"
+            android:configChanges="orientation|screenSize" 
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="com.wtd.customgallery.ImageAlbumListActivity"
+            android:configChanges="orientation|screenSize" >
+        </activity>
+        
+        <activity
+            android:name="com.wtd.customgallery.VideoGalleryActivity"
+            android:configChanges="orientation|screenSize" 
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+        </activity>
+    </application>
+
+</manifest>

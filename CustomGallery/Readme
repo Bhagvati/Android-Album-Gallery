@@ -1,0 +1,37 @@
+Register Activity in AndroidManifest.xml
+AndroidManifest.xml
+<activity
+    android:name="com.wtd.customgallery.CustomGalleryActivity"
+    android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+    android:windowSoftInputMode="stateAlwaysHidden" />
+<activity
+    android:name="com.wtd.customgallery.VideoAlbumListActivity"
+    android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+    android:windowSoftInputMode="stateAlwaysHidden" />
+<activity
+    android:name="com.wtd.customgallery.VideoGalleryActivity"
+    android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+    android:windowSoftInputMode="stateAlwaysHidden" />
+
+==================================================================
+Use in Activity
+Choose Image file
+Intent intent = new Intent(context,ChooseFileActivity.class);
+intent.setType("image");
+context.startActivityForResult(intent, GALLERY_IMAGE);
+
+Choose Video file
+Intent intent = new Intent(context,ChooseFileActivity.class);
+intent.setType("video");
+context.startActivityForResult(intent, GALLERY_VIDEO);
+
+====================================================================
+OnActivityResult
+@Override
+protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+	super.onActivityResult(requestCode, resultCode, data);
+	if (requestCode == Utility.GALLERY_VIDEO && resultCode == RESULT_OK) {
+		com.wtd.customgallery.util.model.WTDVideo wtdVideo = (com.wtd.customgallery.util.model.WTDVideo)data.getExtras().getSerializable("wtd_video");
+		onVideoSend(wtdVideo);
+	}
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gcLinearLayoutContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+   
+
+    <Button
+        android:id="@+id/gcButtonChoosePhotos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_shape"
+        android:padding="10dp"
+        android:text="Choose the Photos"
+        android:textColor="@android:color/black" />
+  <Button
+        android:id="@+id/gcButtonChooseVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_shape"
+        android:padding="10dp"
+        android:text="Choose the Video"
+        android:textColor="@android:color/black" />
+  <Button
+        android:id="@+id/gcButtonChooseMedia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_shape"
+        android:padding="10dp"
+        android:text="Choose All Media"
+        android:textColor="@android:color/black" />
+
+</LinearLayout>
